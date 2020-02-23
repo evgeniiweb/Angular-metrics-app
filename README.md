@@ -1,2 +1,4 @@
 # Angular-metrics-app
-json-server --watch db.json
+yarn install
+json-server --watch db.json (root)
+yarn start
