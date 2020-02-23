@@ -1,0 +1,165 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Edit metrics by {{this.metrics.date | date : 'medium'}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form *ngIf="metricsForm"
+          [formGroup]="metricsForm"
+          (ngSubmit)="onSubmit()">
+      <section class="form-field-row">
+        <mat-form-field appearance="legacy">
+          <mat-label>Height</mat-label>
+          <input formControlName="height"
+                 matInput
+                 required>
+          <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+          <mat-label>Weight</mat-label>
+          <input formControlName="weight"
+                 matInput
+                 required>
+          <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+      </section>
+      <section class="form-field-row">
+        <mat-form-field appearance="legacy">
+          <mat-label>Neck</mat-label>
+          <input formControlName="neck"
+                 matInput
+                 required>
+          <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+      </section>
+      <section class="form-field-row">
+        <mat-form-field appearance="legacy">
+          <mat-label>Shoulders</mat-label>
+          <input formControlName="shoulders"
+                 matInput
+                 required>
+          <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+      </section>
+      <section class="form-field-row">
+        <mat-form-field appearance="legacy">
+          <mat-label>Chest</mat-label>
+          <input formControlName="chest"
+                 matInput
+                 required>
+          <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+      </section>
+      <section class="form-field-row"
+               formGroupName="biceps">
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Biceps left</mat-label>
+            <input formControlName="left"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Biceps right</mat-label>
+            <input formControlName="right"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+      </section>
+      <section class="form-field-row"
+               formGroupName="forearm">
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Forearm left</mat-label>
+            <input formControlName="left"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Forearm right</mat-label>
+            <input formControlName="right"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+      </section>
+      <section class="form-field-row">
+        <mat-form-field appearance="legacy">
+          <mat-label>Waist</mat-label>
+          <input formControlName="waist"
+                 matInput
+                 required>
+          <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+      </section>
+      <section class="form-field-row">
+        <mat-form-field appearance="legacy">
+          <mat-label>Hips</mat-label>
+          <input formControlName="hips"
+                 matInput
+                 required>
+          <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+        </mat-form-field>
+      </section>
+      <section class="form-field-row" formGroupName="thigh">
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Thigh left</mat-label>
+            <input formControlName="left"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Thigh right</mat-label>
+            <input formControlName="right"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+      </section>
+      <section class="form-field-row" formGroupName="calf">
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Calf left</mat-label>
+            <input formControlName="left"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+        <article>
+          <mat-form-field appearance="legacy">
+            <mat-label>Calf right</mat-label>
+            <input formControlName="right"
+                   matInput
+                   required>
+            <mat-error *ngIf="!metricsForm.hasError('required')">Field is required</mat-error>
+          </mat-form-field>
+        </article>
+      </section>
+      <mat-card-actions align="end">
+        <button mat-flat-button
+                color="primary"
+                type="submit"
+                [disabled]="!metricsForm.valid">Update
+        </button>
+        <a mat-flat-button
+           routerLink="/metrics/list"
+           color="primary">Back</a>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>

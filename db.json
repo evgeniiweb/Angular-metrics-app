@@ -1,0 +1,86 @@
+{
+  "trainings": [
+    {
+      "id": 1,
+      "title": "Training (morning)",
+      "duration": "1 hour",
+      "date": "07 02 2020",
+      "exercises": [
+        {
+          "id": 1,
+          "title": "pull-ups",
+          "sets": 4,
+          "repeats": 11
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Training (day)",
+      "duration": "2 hour",
+      "date": "09 02 2020"
+    },
+    {
+      "id": 3,
+      "title": "Training (evening)",
+      "duration": "3 hour",
+      "date": "11 02 2020"
+    }
+  ],
+  "metrics": [
+    {
+      "height": "1",
+      "weight": "2",
+      "neck": "3",
+      "shoulders": "4",
+      "chest": "5",
+      "biceps": {
+        "left": "11",
+        "right": "11"
+      },
+      "forearm": {
+        "left": "22",
+        "right": "22"
+      },
+      "waist": "6",
+      "hips": "7",
+      "thigh": {
+        "left": "88",
+        "right": "88"
+      },
+      "calf": {
+        "left": "99",
+        "right": "99"
+      },
+      "date": "2020-02-23T11:28:34.337Z",
+      "id": 13
+    },
+    {
+      "height": "1",
+      "weight": "2",
+      "neck": "3",
+      "shoulders": "4",
+      "chest": "5",
+      "biceps": {
+        "left": "6",
+        "right": "7"
+      },
+      "forearm": {
+        "left": "8",
+        "right": "9"
+      },
+      "waist": "10",
+      "hips": "11",
+      "thigh": {
+        "left": "12",
+        "right": "13"
+      },
+      "calf": {
+        "left": "14",
+        "right": "15"
+      },
+      "date": "2020-02-23T13:42:45.492Z",
+      "id": 14
+    }
+  ]
+}

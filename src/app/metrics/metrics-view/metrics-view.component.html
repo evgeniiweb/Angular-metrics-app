@@ -1,0 +1,93 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+<mat-card *ngIf="metrics$ | async as metrics">
+  <mat-card-header>
+    <mat-card-title>Metrics by {{metrics.date | date : 'medium'}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <section>
+      <article>
+        <h4>Height</h4>
+        <p>{{metrics.height}}</p>
+      </article>
+      <article>
+        <h4>Weight</h4>
+        <p>{{metrics.weight}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Neck</h4>
+        <p>{{metrics.neck}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Shoulders</h4>
+        <p>{{metrics.shoulders}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Chest</h4>
+        <p>{{metrics.chest}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Biceps left</h4>
+        <p>{{metrics.biceps.left}}</p>
+      </article>
+      <article>
+        <h4>Biceps right</h4>
+        <p>{{metrics.biceps.right}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Forearm left</h4>
+        <p>{{metrics.forearm.left}}</p>
+      </article>
+      <article>
+        <h4>Forearm right</h4>
+        <p>{{metrics.forearm.right}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Waist</h4>
+        <p>{{metrics.waist}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Hips</h4>
+        <p>{{metrics.hips}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Thigh left</h4>
+        <p>{{metrics.thigh.left}}</p>
+      </article>
+      <article>
+        <h4>Thigh right</h4>
+        <p>{{metrics.thigh.right}}</p>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h4>Calf left</h4>
+        <p>{{metrics.calf.left}}</p>
+      </article>
+      <article>
+        <h4>Calf right</h4>
+        <p>{{metrics.calf.right}}</p>
+      </article>
+    </section>
+    <mat-card-actions align="end">
+      <a mat-flat-button
+         routerLink="/metrics/list"
+         color="primary">Back</a>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
